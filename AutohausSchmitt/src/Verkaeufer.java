@@ -13,6 +13,7 @@ public class Verkaeufer {
     public String getVorname() {
         return _vorname;
     }
+
     public void setVorname(String vorname) {
         this._vorname = vorname;
     }
@@ -20,6 +21,7 @@ public class Verkaeufer {
     public String getNachname() {
         return _nachname;
     }
+    
     public void setNachname(String nachname) {
         this._nachname = nachname;
     }

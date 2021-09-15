@@ -62,7 +62,8 @@ public class Menu {
         System.out.println("Vielen Dank, dein Auto wird erstellt");
 
         // die Variablen zu einem Auto zusammensetzen, ein Objekt erzeugen
-        Auto a1 = new Auto(marke, modell, baujahr);
+        Auto a = new Auto(marke, modell, baujahr);
+
         
         startMenu();
     }
@@ -78,7 +79,9 @@ public class Menu {
         
         System.out.println("Vielen Dank, dein Kunde wird erstellt");
 
-        Kunde k1 = new Kunde(vorname, nachname);
+        Kunde k = new Kunde(vorname, nachname);
+
+        System.out.println(k.getVorname());
 
         startMenu();
     }
@@ -95,7 +98,7 @@ public class Menu {
         Integer persnr = Integer.valueOf(personalnummer);
         System.out.println("Vielen Dank, dein Verkäufer wird erstellt");
 
-        Verkaeufer vk1 = new Verkaeufer(vorname, nachname, persnr);
+        Verkaeufer vk = new Verkaeufer(vorname, nachname, persnr);
         
         startMenu();
     }

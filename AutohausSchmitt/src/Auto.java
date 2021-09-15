@@ -7,7 +7,7 @@ public class Auto {
     String _baujahr;
 
     // Constructor initialisiert die Variablen
-    public Auto(String marke, String modell, String baujahr){
+    public Auto(String marke, String modell, String baujahr){   //Methodensignatur
         this.setMarke(marke);           // Verweiß auf den Setter
         this.setModell(modell);
         this.setBaujahr(baujahr);
@@ -18,6 +18,7 @@ public class Auto {
     public String getBaujahr() {
         return _baujahr;
     }
+
     public void setBaujahr(String baujahr) {
         this._baujahr = baujahr;
     }
@@ -25,6 +26,7 @@ public class Auto {
     public String getMarke() {
         return _marke;
     }
+
     public void setMarke(String marke) {
         this._marke = marke;
     }
@@ -32,6 +34,7 @@ public class Auto {
     public String getModell() {
         return _modell;
     }
+    
     public void setModell(String modell) {
         this._modell = modell;
     }
