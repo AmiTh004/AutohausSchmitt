@@ -98,9 +98,14 @@ public class Menu {
         Integer persnr = Integer.valueOf(personalnummer);
         System.out.println("Vielen Dank, dein Verkäufer wird erstellt");
 
-        Verkaeufer vk = new Verkaeufer(vorname, nachname, persnr);
+        Verkaeufer v = new Verkaeufer(vorname, nachname, persnr);
         
         startMenu();
+    }
+
+    public void createVerkaufMenu(Auto a, Verkaeufer v, Kunde k){
+        Verkauf vk = new Verkauf(a, k, v)
+
     }
 
     
