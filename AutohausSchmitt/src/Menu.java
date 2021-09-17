@@ -17,6 +17,7 @@ public class Menu {
         System.out.println("(2) Neuer Kunde");
         System.out.println("(3) Neues Auto");
         System.out.println("(4) Neuer Verkäufer");
+        System.out.println("(5) Alle Autos ausgeben");
         String choice = getScanner().nextLine();
         System.out.println("Hier geht es weiter mit"+ choice);
 
@@ -30,23 +31,33 @@ public class Menu {
         else if(choice.equals("2")){
             createKundeMenu();
         }
+
         else if(choice.equals("3")){
             createAutoMenu();
         }
+
         else if(choice.equals("4")){
             createVerkaeuferMenu();
         }
-        
+
+        else if(choice.equals("5")){
+            showAutos();
+        }
+
         else{
-            System.out.println("Bitte nur 1,2,3,4 eingeben!!!");
+            System.out.println("Bitte nur 1,2,3,4,5 eingeben!!!");
         }
         
+        startMenu();
+    }
 
-        //System.out.println("Dein Auto" + a1.getBaujahr());
-
-
-    
-        
+    public void showAutos(){
+        for (Auto auto : App.getALLAutos()) {
+            if(auto != null){
+                System.out.println(auto.getMarke() +" "+ auto.getBaujahr());
+            }
+            
+        }
     }
     // ein Auto erstellen
     public void createAutoMenu(){
@@ -61,11 +72,10 @@ public class Menu {
         String baujahr = getScanner().nextLine();
         System.out.println("Vielen Dank, dein Auto wird erstellt");
 
-        // die Variablen zu einem Auto zusammensetzen, ein Objekt erzeugen
-        Auto a = new Auto(marke, modell, baujahr);
+        // die Variablen zu einem Auto zusammensetzen, ein Objekt erzeugen dass direkt in die Array gesetzt wird
+        App.addAuto(new Auto(marke, modell, baujahr));
 
-        
-        startMenu();
+        System.out.println(App.getALLAutos());
     }
 
     
@@ -82,8 +92,6 @@ public class Menu {
         Kunde k = new Kunde(vorname, nachname);
 
         System.out.println(k.getVorname());
-
-        startMenu();
     }
 
     public void createVerkaeuferMenu(){
@@ -99,16 +107,13 @@ public class Menu {
         System.out.println("Vielen Dank, dein Verkäufer wird erstellt");
 
         Verkaeufer v = new Verkaeufer(vorname, nachname, persnr);
-        
-        startMenu();
     }
 
-    public void createVerkaufMenu(Auto a, Verkaeufer v, Kunde k){
-        Verkauf vk = new Verkauf(a, k, v)
+    public void createVerkaufMenu(){
+        // TODO: Die verschiedenen Objekte in den Verkauf implementieren
 
     }
 
-    
 
     public void setScanner(Scanner _scanner) {
         this._scanner = _scanner;

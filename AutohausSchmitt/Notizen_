@@ -1,0 +1,21 @@
+17.9.2021
+
+- Wiederholung
+- neuer Variablentyp: Array [3,4,2]
+index: [0,1,2,3,...]
+length: index + 1 (Elemente insgesammt)
+der maximale index ist immer einer weniger, als die maximale length
+Auto [] a = new Auto[8]
+
+in App.java reinschreiben
+
+neue Methode addAuto()
+
+Menu if-Abfrage um eine Möglichkeit ergänzen
+ - 5.
+
+- For each - Schleife
+
+!=
+
+Hausaufgabe: das, was wir mit Autos gemacht haben, auch für die anderen sachen
