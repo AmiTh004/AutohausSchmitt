@@ -89,9 +89,8 @@ public class Menu {
         
         System.out.println("Vielen Dank, dein Kunde wird erstellt");
 
-        Kunde k = new Kunde(vorname, nachname);
+        App.addKunde(new Kunde(vorname, nachname));
 
-        System.out.println(k.getVorname());
     }
 
     public void createVerkaeuferMenu(){
@@ -106,7 +105,7 @@ public class Menu {
         Integer persnr = Integer.valueOf(personalnummer);
         System.out.println("Vielen Dank, dein Verkäufer wird erstellt");
 
-        Verkaeufer v = new Verkaeufer(vorname, nachname, persnr);
+        App.addVerkaeufer(new Verkaeufer(vorname, nachname, persnr));
     }
 
     public void createVerkaufMenu(){
