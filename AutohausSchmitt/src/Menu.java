@@ -9,7 +9,7 @@ public class Menu {
     public Menu(){
         setScanner(new Scanner(System.in));
 
-    }
+    } 
     
     public void startMenu(){
         System.out.println("Bitte wähle aus:");
@@ -18,6 +18,8 @@ public class Menu {
         System.out.println("(3) Neues Auto");
         System.out.println("(4) Neuer Verkäufer");
         System.out.println("(5) Alle Autos ausgeben");
+        System.out.println("(6) Alle Kunden ausgeben");
+        System.out.println("(7) Alle Verkäufer ausgeben");
         String choice = getScanner().nextLine();
         System.out.println("Hier geht es weiter mit"+ choice);
 
@@ -44,21 +46,47 @@ public class Menu {
             showAutos();
         }
 
+        else if(choice.equals("6")){
+            showKunden();
+        }
+
+        else if(choice.equals("7")){
+            showVerkaeufer();
+        }
+
         else{
-            System.out.println("Bitte nur 1,2,3,4,5 eingeben!!!");
+            System.out.println("Bitte nur 1,2,3,4,5,6,7 eingeben!!!");
         }
         
         startMenu();
     }
 
+    public void showObject(Object[] array){
+        for (Object obj : array) {
+            if(obj != null)
+            System.out.println(obj.getClass());
+        }
+    }
+
     public void showAutos(){
-        for (Auto auto : App.getALLAutos()) {
+        showObject(App.getALLAutos());
+        /*for (Auto auto : App.getALLAutos()) {
             if(auto != null){
                 System.out.println(auto.getMarke() +" "+ auto.getBaujahr());
             }
             
-        }
+        }*/
     }
+
+    public void showKunden(){
+        showObject(App.getALLKunde());
+    }
+
+    public void showVerkaeufer(){
+        showObject(App.getALLVerkaeufer());
+    }
+
+
     // ein Auto erstellen
     public void createAutoMenu(){
         
