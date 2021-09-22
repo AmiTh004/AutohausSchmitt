@@ -64,7 +64,7 @@ public class Menu {
     public void showObject(Object[] array){
         for (Object obj : array) {
             if(obj != null)
-            System.out.println(obj.getClass());
+            System.out.println(obj.printObject());  //TODO: eine Klasse Object erstellen, als Oberklasse, die die methode printObject enthält.
         }
     }
 

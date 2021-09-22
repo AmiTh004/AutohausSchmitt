@@ -10,6 +10,11 @@ public class Verkaeufer {
         this.setPersonalnummer(personalnummer);
     }
 
+    public void printObject(){
+        System.out.println(_vorname));
+        System.out.println(_nachname);
+    }
+
     public String getVorname() {
         return _vorname;
     }

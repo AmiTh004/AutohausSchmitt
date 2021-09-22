@@ -12,6 +12,11 @@ public class Kunde {
         
     }
 
+    public void printObject(){
+        System.out.println(_vorname);
+        System.out.println(_nachname);
+    }
+
     public void setAdresse(String adresse) {
         this._adresse = adresse;
     }

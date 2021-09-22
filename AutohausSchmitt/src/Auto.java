@@ -13,7 +13,10 @@ public class Auto {
         this.setBaujahr(baujahr);
     }
 
-
+    public void printObject(){
+        System.out.println(_marke);
+        System.out.println(_modell);
+    }
 
     public String getBaujahr() {
         return _baujahr;
