@@ -26,7 +26,7 @@ public class Menu {
         // if-Abfrage
         // if(variable operator vergleichswert): TRUE?
         if(choice.equals("1")){
-            System.out.println("Verkauf wurde noch nicht implementiert...");
+            createVerkaufMenu();
         }
 
         // weitere Bedingung
@@ -61,29 +61,44 @@ public class Menu {
         startMenu();
     }
 
-    public void showObject(Object[] array){
+
+    
+    /*public void showObject(Object[] array){
         for (Object obj : array) {
             if(obj != null)
-            System.out.println(obj.printObject());  //TODO: eine Klasse Object erstellen, als Oberklasse, die die methode printObject enthält.
+            System.out.println(obj.getClass());  //TODO: eine Klasse Object erstellen, als Oberklasse, die die methode printObject enthält.
+        
         }
-    }
+    }*/
 
     public void showAutos(){
-        showObject(App.getALLAutos());
-        /*for (Auto auto : App.getALLAutos()) {
+        //showObject(App.getALLAutos());
+        for (Auto auto : App.getALLAutos()) {
             if(auto != null){
                 System.out.println(auto.getMarke() +" "+ auto.getBaujahr());
             }
             
-        }*/
+        }
     }
 
     public void showKunden(){
-        showObject(App.getALLKunde());
+        //showObject(App.getALLKunde());
+        for (Kunde kunde : App.getALLKunde()) {
+            if(kunde != null){
+                System.out.println(kunde.getVorname() +" "+ kunde.getNachname());
+            }
+            
+        }
     }
 
     public void showVerkaeufer(){
-        showObject(App.getALLVerkaeufer());
+        //showObject(App.getALLVerkaeufer());
+        for (Verkaeufer verkaeufer : App.getALLVerkaeufer()) {
+            if(verkaeufer!= null){
+                System.out.println(verkaeufer.getVorname() +" "+ verkaeufer.getVorname());
+            }
+            
+        }
     }
 
 
@@ -130,15 +145,25 @@ public class Menu {
         String nachname = getScanner().nextLine();
         System.out.print("Personalnummer:");
         String personalnummer = getScanner().nextLine();
-        Integer persnr = Integer.valueOf(personalnummer);
+        int persnr = Integer.valueOf(personalnummer);
         System.out.println("Vielen Dank, dein Verkäufer wird erstellt");
 
         App.addVerkaeufer(new Verkaeufer(vorname, nachname, persnr));
     }
 
     public void createVerkaufMenu(){
-        // TODO: Die verschiedenen Objekte in den Verkauf implementieren
-
+        int i = 0;
+        System.out.println("Bitte wählen sie ein Auto aus:");
+        for (Auto auto : App.getALLAutos()) {
+            if(auto != null){
+                System.out.println(i + " - " + auto.getMarke() + " " + auto.getModell());
+                i++;
+            }
+            
+        }
+        String car_choice = getScanner().next();
+        int car_index = Integer.valueOf(car_choice);
+        System.out.println(App.getALLAutos()[car_index]);
     }
 
 

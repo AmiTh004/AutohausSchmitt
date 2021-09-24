@@ -11,7 +11,7 @@ public class Verkaeufer {
     }
 
     public void printObject(){
-        System.out.println(_vorname));
+        System.out.println(_vorname);
         System.out.println(_nachname);
     }
 

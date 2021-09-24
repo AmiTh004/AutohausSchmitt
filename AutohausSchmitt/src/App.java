@@ -3,6 +3,7 @@ public class App {
     static Auto [] _autos;
     static Kunde [] _kunde;
     static Verkaeufer [] _verkaeufer;
+    static Verkauf [] _verkauf;
 
     public static void main(String[] args) throws Exception {
         // intitialisieren von _autos
@@ -10,7 +11,7 @@ public class App {
         _autos = new Auto[8];   // [8] -> Anzahhl der maximal möglichen Elemente
         _kunde = new Kunde[4];
         _verkaeufer = new Verkaeufer[3];
-        
+        _verkauf = new Verkauf[8];
         //_autos [0] = new Auto("Ford", "t", "2020");
         //_autos [1] = new Auto("VW", "Bus", "2004");
         //_autos [2] = new Auto("audi", "R5", "2018");
@@ -25,6 +26,7 @@ public class App {
         for (Object a : array) {
             if(a == null){
                 array[i]= ele;
+                break;
             }
             i++;
         }
@@ -41,6 +43,10 @@ public class App {
     public static void addVerkaeufer(Verkaeufer verkaeufer){
         addObject(verkaeufer, getALLVerkaeufer());
     }
+
+   // public static void addVerkauf(Auto _autos[], Kunde _kunde[], Verkaeufer _verkaeufer[]){
+        //addObject(erkauf, array);
+    
     
     public static Verkaeufer[] getALLVerkaeufer(){
         return _verkaeufer;
