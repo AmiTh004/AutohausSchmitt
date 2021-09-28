@@ -18,4 +18,6 @@ Menu if-Abfrage um eine Möglichkeit ergänzen
 
 !=
 
-Hausaufgabe: das, was wir mit Autos gemacht haben, auch für die anderen Sachen
+24.9.2021:
+Hausaufgabe: Das alles auf verjäufer und Kunden übertragen, einen Verkauf final erstellenund in einem Menüpunkt erstellen, um alle Verkäufe auszugeben. 
+Achtung: Bei verkauf muss auch ein Int umgewandelt werden, damit wir einen Preis speichern können.
