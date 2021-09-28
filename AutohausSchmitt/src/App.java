@@ -44,10 +44,17 @@ public class App {
         addObject(verkaeufer, getALLVerkaeufer());
     }
 
+    public static void addVerkauf(Verkauf verkauf){
+        addObject(verkauf, getALLVerkauf());
+    }
+
    // public static void addVerkauf(Auto _autos[], Kunde _kunde[], Verkaeufer _verkaeufer[]){
         //addObject(erkauf, array);
-    
-    
+    //}
+    public static Verkauf[] getALLVerkauf(){
+        return _verkauf;
+    }
+
     public static Verkaeufer[] getALLVerkaeufer(){
         return _verkaeufer;
     }

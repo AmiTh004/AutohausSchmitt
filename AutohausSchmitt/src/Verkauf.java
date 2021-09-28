@@ -6,10 +6,11 @@ public class Verkauf {
     Verkaeufer _verkaeufer;
     String _datum;
 
-    public Verkauf(Auto auto,Kunde kunde, Verkaeufer verkaeufer){
+    public Verkauf(Auto auto,Kunde kunde, Verkaeufer verkaeufer, String datum){
         this.setAuto(auto);
         this.setKunde(kunde);
         this.setVerkaeufer(verkaeufer);
+        this.setDatum(datum);
     }
 
     public Auto getAuto() {
