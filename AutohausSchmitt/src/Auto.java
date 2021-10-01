@@ -1,10 +1,11 @@
-public class Auto {
+public class Auto{
 
     // Variablen deklarieren
     String _marke;
     int _preis;
     String _modell;
     String _baujahr;
+
 
     // Constructor initialisiert die Variablen
     public Auto(String marke, String modell, String baujahr){   //Methodensignatur
