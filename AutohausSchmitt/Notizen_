@@ -21,3 +21,11 @@ Menu if-Abfrage um eine Möglichkeit ergänzen
 24.9.2021:
 Hausaufgabe: Das alles auf Verkäufer und Kunden übertragen, einen Verkauf final erstellen und in eine Menüpunkt erstellen, um alle Verkäufe auszugeben. 
 Achtung: Bei verkauf muss auch ein Int umgewandelt werden, damit wir einen Preis speichern können.
+
+29.9.21:
+Methode von Verkaufsliste um Summe erweitern, also von allen Verkäufen den Gesammtpreis errechnen. 
+
+github:
+Jordan-Velte
+liagymhum
+htrampe

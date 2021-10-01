@@ -12,9 +12,14 @@ public class App {
         _kunde = new Kunde[4];
         _verkaeufer = new Verkaeufer[3];
         _verkauf = new Verkauf[8];
-        //_autos [0] = new Auto("Ford", "t", "2020");
-        //_autos [1] = new Auto("VW", "Bus", "2004");
-        //_autos [2] = new Auto("audi", "R5", "2018");
+
+        // Demodaten
+        _autos [0] = new Auto("Ford", "t", "2020");
+        _autos [1] = new Auto("VW", "Bus", "2004");
+        _autos [2] = new Auto("audi", "R5", "2018");
+
+        _kunde [0] = new Kunde("Heinz", "Erhardt");
+        _kunde [0] = new Kunde("Rosa", "Parks");
 
         Menu menu = new Menu();
         menu.startMenu();        

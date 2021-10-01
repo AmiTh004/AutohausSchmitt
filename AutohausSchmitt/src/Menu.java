@@ -106,12 +106,15 @@ public class Menu {
     }
 
     public void showVerkauf(){
+        int gesamtpreis = 0;
         for (Verkauf verkauf : App.getALLVerkauf()) {
             if(verkauf!= null){
                 System.out.println(verkauf.getDatum());
+                gesamtpreis = gesamtpreis + verkauf.getPreis();
+
             }
-            
         }
+        System.out.println("Der Gesamtpreis beträgt: "+ gesamtpreis );
     }
 
 
@@ -179,8 +182,8 @@ public class Menu {
             
         }
         String car_choice = getScanner().next();
+        //String in Integer umwandeln
         int car_index = Integer.valueOf(car_choice);
-
         System.out.println(App.getALLAutos()[car_index]);
 
         //Kunden auswählen
@@ -220,10 +223,10 @@ public class Menu {
         System.out.println("Das ist ihr Verkauf: "+ date);
         System.out.println("Auto: "+ App.getALLAutos()[car_index].getModell()+ "\nKunde: "+App.getALLKunde()[kunde_index].getNachname()+"\nVerkäufer: "+App.getALLVerkaeufer()[seller_index].getPersonalnummer()+ "\nPreis: "+ preis_verkauf);
 
-        App.addVerkauf(new Verkauf(App.getALLAutos()[car_index], App.getALLKunde()[kunde_index], App.getALLVerkaeufer()[seller_index],date));
+        App.addVerkauf(new Verkauf(App.getALLAutos()[car_index], App.getALLKunde()[kunde_index], App.getALLVerkaeufer()[seller_index],date, preis_verkauf));
     }
 
-    public void setScanner(Scanner _scanner) {
+    public void setScanner(Scanner _scanner) { 
         this._scanner = _scanner;
     }
     public Scanner getScanner() {

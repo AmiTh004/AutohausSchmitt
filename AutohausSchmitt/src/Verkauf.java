@@ -2,15 +2,16 @@ public class Verkauf {
 
     Auto _auto;
     Kunde _kunde;
-    int _preis;
     Verkaeufer _verkaeufer;
     String _datum;
+    int _preis;
 
-    public Verkauf(Auto auto,Kunde kunde, Verkaeufer verkaeufer, String datum){
+    public Verkauf(Auto auto,Kunde kunde, Verkaeufer verkaeufer, String datum, int preis){
         this.setAuto(auto);
         this.setKunde(kunde);
         this.setVerkaeufer(verkaeufer);
         this.setDatum(datum);
+        this.setPreis(preis);
     }
 
     public Auto getAuto() {
