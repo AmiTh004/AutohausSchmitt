@@ -40,7 +40,7 @@ public class App {
     public static void addAuto(Auto auto){
         addObject(auto, getALLAutos());
     }
-
+    
     public static void addKunde(Kunde kunde){
         addObject(kunde, getALLKunde());
     }
@@ -53,9 +53,7 @@ public class App {
         addObject(verkauf, getALLVerkauf());
     }
 
-   // public static void addVerkauf(Auto _autos[], Kunde _kunde[], Verkaeufer _verkaeufer[]){
-        //addObject(erkauf, array);
-    //}
+
     public static Verkauf[] getALLVerkauf(){
         return _verkauf;
     }
@@ -70,7 +68,6 @@ public class App {
 
     public static Auto[] getALLAutos(){
         return _autos;
-
     }
 
 }
