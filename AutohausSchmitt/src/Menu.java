@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Menu {
+public class Menu extends Methoden {
 
     Scanner _scanner;
     
@@ -186,20 +186,6 @@ public class Menu {
         int car_index = Integer.valueOf(car_choice);
         System.out.println(App.getALLAutos()[car_index]);
 
-        //Kunden auswählen
-        i = 0;
-        System.out.println("Bitte wählen sie einen Kunden: ");
-        for (Kunde kunde : App.getALLKunde()){
-            if(kunde != null){
-                System.out.println(i+" - "+kunde.getVorname()+" "+kunde.getNachname());
-                i++;
-            }
-        }
-        String kunde_choice = getScanner().next();
-        int kunde_index = Integer.valueOf(kunde_choice);
-
-        System.out.println(App.getALLKunde()[kunde_index]);
-
         //Verkäufer auswählen
         i = 0;
         System.out.println("Bitte wählen sie einen Verkäufer: ");
@@ -214,6 +200,27 @@ public class Menu {
 
         System.out.println(App.getALLVerkaeufer()[seller_index]); 
 
+        //Kunden auswählen oder neu Anlegen
+        i = 0;
+        System.out.println("Bitte wählen sie einen Kunden: ");
+        int numNewKunde = elesInArray(App.getALLKunde());
+        for (Kunde kunde : App.getALLKunde()){
+            if(kunde != null){
+                System.out.println(i+" - "+kunde.getVorname()+" "+kunde.getNachname());
+                i++;
+            }
+        }
+        System.out.println(numNewKunde+" Einen neuen verkauf erstellen");
+        String kunde_choice = getScanner().next();
+        int kunde_index = Integer.valueOf(kunde_choice);
+
+        if (kunde_index == numNewKunde) {
+            createKundeMenu();
+        }
+
+        System.out.println(App.getALLKunde()[kunde_index]);
+
+        
         // Preis
         System.out.println("Geben sie den Preis an: ");
         String preis_choice = getScanner().next();

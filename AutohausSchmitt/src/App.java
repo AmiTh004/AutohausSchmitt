@@ -14,12 +14,14 @@ public class App {
         _verkauf = new Verkauf[8];
 
         // Demodaten
-        _autos [0] = new Auto("Ford", "t", "2020");
+        _autos [0] = new Auto("Ford", "T", "2020");
         _autos [1] = new Auto("VW", "Bus", "2004");
         _autos [2] = new Auto("audi", "R5", "2018");
 
         _kunde [0] = new Kunde("Heinz", "Erhardt");
-        _kunde [0] = new Kunde("Rosa", "Parks");
+        _kunde [1] = new Kunde("Rosa", "Parks");
+
+        _verkaeufer[0] = new Verkaeufer("Emil", "Ziegelmeier", 2422);
 
         Menu menu = new Menu();
         menu.startMenu();        
