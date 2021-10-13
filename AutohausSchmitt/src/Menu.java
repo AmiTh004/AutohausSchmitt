@@ -85,6 +85,8 @@ public class Menu extends Methoden {
         }
     }
 
+    
+
     public void showKunden(){
         //showObject(App.getALLKunde());
         for (Kunde kunde : App.getALLKunde()) {

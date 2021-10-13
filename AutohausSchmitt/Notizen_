@@ -31,3 +31,18 @@ liagymhum
 htrampe
 arlelm
 LokiSTR
+
+ // Autos zeigen
+    public String showAutos(){
+        int i = 0; // Zählvariable wird auf Null gesetzt
+        String availableCars = "";
+        for(Auto auto : App.getAllAutos()){
+            if(auto != null){
+                // in String "availableCars" wird jedes Element des Arrays "getAllAutos" gespreichert
+                availableCars = availableCars+i+") "+auto.getMarke()+" "+auto.getModell()+"\n";
+                // Marke und Modell werden gespeichert
+                i++;
+            }
+        }
+        return availableCars;
+    }
