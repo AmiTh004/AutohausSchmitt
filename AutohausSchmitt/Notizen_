@@ -46,3 +46,16 @@ LokiSTR
         }
         return availableCars;
     }
+
+03.11.2021:
+Arbeitet die Autovermietung so um (oder erstellt es als neues Projekt), dass ihr 
+LKW (max. Zuladung Tonnen) , 
+Kombi (Siebensitze Ja oder nein), 
+Sportwagen (max. Geschwindigkeit) und 
+Geländewagen (maximaler Kippradius) mit den identischen Eigenschaften 
+PS, Typ, Marke, Preis erstellt (die individuellen stehen hinter den Klammern). Setzt nur die Vererbungsstruktur auf und überlegt euch einen sinnvollen Klassennamen für eine Oberklasse!
+
+
+public LKW(String marke, String typ, Sting ps, int preis){
+        super(marke, typ, ps, preis)
+    }
