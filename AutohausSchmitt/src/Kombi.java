@@ -5,7 +5,7 @@ public class Kombi extends Fahrzeug {
     public Kombi(String marke, String typ, String ps, int preis, int sitzplaetze){
         super(marke, typ, ps, preis);
         if (sitzplaetze == 7) {
-           setSitzplaetze(sitzplaetze); 
+           this.setSitzplaetze(sitzplaetze); 
         }
 
     }
