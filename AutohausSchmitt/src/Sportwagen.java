@@ -1,18 +1,18 @@
 public class Sportwagen extends Fahrzeug {
     
 
-    String _maxGeschwindigkeit;
+    int _maxGeschwindigkeit;
 
-    public Sportwagen(String marke, String typ, String ps, int preis, String maxGeschwindigkeit){
+    public Sportwagen(String marke, String typ, String ps, int preis, int maxGeschwindigkeit){
         super(marke, typ, ps, preis);
         this.setMaxGeschwindigkeit(maxGeschwindigkeit);
     }
 
-    public void setMaxGeschwindigkeit(String maxGeschwindigkeit) {
+    public void setMaxGeschwindigkeit(int maxGeschwindigkeit) {
         this._maxGeschwindigkeit = maxGeschwindigkeit;
     }
 
-    public String getMaxGeschwindigkeit() {
+    public int getMaxGeschwindigkeit() {
         return _maxGeschwindigkeit;
     }
 }

@@ -1,17 +1,17 @@
 public class Gelaendewagen extends Fahrzeug {
     
-    String _maxKippradius;
+    int _maxKippradius;
 
-    public Gelaendewagen(String marke, String typ, String ps, int preis, String maxKippradius){
+    public Gelaendewagen(String marke, String typ, String ps, int preis, int maxKippradius){
         super(marke, typ, ps, preis);
         this.setMaxKippradius(maxKippradius);
     }
 
-    public void setMaxKippradius(String maxKippradius) {
+    public void setMaxKippradius(int maxKippradius) {
         this._maxKippradius = maxKippradius;
     }
 
-    public String getMaxKippradius() {
+    public int getMaxKippradius() {
         return _maxKippradius;
     }
 }
