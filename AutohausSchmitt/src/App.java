@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class App {
 
     static Auto [] _autos;
@@ -7,7 +8,26 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         // intitialisieren von _autos
-        
+
+        ArrayList<Fahrzeug> fahrzeuge = new ArrayList<Fahrzeug>();
+
+        fahrzeuge.add(new Kombi("VW", "Touran", 150, 2000, true));
+        fahrzeuge.add(new Kombi("VW", "Tiguan", 165, 12900, true));
+        fahrzeuge.add(new Kombi("VW", "Polo", 74, 3579, false));
+
+        // Punktnotation an dem jewieligen Objekt .getPS()
+        // if Abfrage - verglichen wird PS
+        // ArrayLaos durchgehen - iterieren -Ok
+
+        Fahrzeug maxAuto = fahrzeuge.get(0);
+        for (Fahrzeug f : fahrzeuge) {
+            if (f.getPs() > maxAuto.getPs()) {
+                maxAuto = f;
+            }
+        }
+
+        System.out.println("Das Auto mit der höchsten PS Zahl hat" + maxAuto.getPs());
+
         _autos = new Auto[8];   // [8] -> Anzahhl der maximal möglichen Elemente
         _kunde = new Kunde[4];
         _verkaeufer = new Verkaeufer[3];

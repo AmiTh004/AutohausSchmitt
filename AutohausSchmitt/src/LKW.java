@@ -4,7 +4,7 @@ public class LKW extends Fahrzeug{
     int _maxLandung;
 
     //Constructor
-    public LKW(String marke, String typ, String ps, int preis, int maxLadung){
+    public LKW(String marke, String typ, int ps, int preis, int maxLadung){
         super(marke, typ, ps, preis);
         this.setMaxLandung(maxLadung);
     }

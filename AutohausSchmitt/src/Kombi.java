@@ -1,22 +1,19 @@
 public class Kombi extends Fahrzeug {
 
-    int _sitzplaetze;
+    boolean _siebenSitzplaetze;
     
-    public Kombi(String marke, String typ, String ps, int preis, int sitzplaetze){
+    public Kombi(String marke, String typ, int ps, int preis, boolean siebenSitzplaetze){
         super(marke, typ, ps, preis);
-        if (sitzplaetze == 7) {
-           this.setSitzplaetze(sitzplaetze); 
-        }
+        this.setSiebenSitzplaetze(siebenSitzplaetze);
 
     }
 
-    public void setSitzplaetze(int sitzplaetze) {
-        this._sitzplaetze = sitzplaetze;
+    public void setSiebenSitzplaetze(boolean siebenSitzplaetze) {
+        this._siebenSitzplaetze = siebenSitzplaetze;
     }
 
-    public int getSitzplaetze() {
-        return _sitzplaetze;
+    public boolean getSiebenSitzplaetze() {
+        return _siebenSitzplaetze;
     }
-
 
 }

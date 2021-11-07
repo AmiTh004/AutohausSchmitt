@@ -3,12 +3,12 @@ public class Fahrzeug {
     // Variablen deklarieren
     String _marke;
     String _typ;
-    String _ps;
-    int _preis;
+    int _ps;
+    int _preis; // float (4 byte) und double (8 byte) für Dezimalzahlen
 
 
     // Constructor initialisiert die Variablen
-    public Fahrzeug(String marke, String typ, String ps, int preis){
+    public Fahrzeug(String marke, String typ, int ps, int preis){
         this.setPreis(preis);
         this.setMarke(marke);
         this.setPs(ps);
@@ -32,11 +32,11 @@ public class Fahrzeug {
         return _preis;
     }
 
-    public void setPs(String ps) {
+    public void setPs(int ps) {
         this._ps = ps;
     }
 
-    public String getPs() {
+    public int getPs() {
         return _ps;
     }
 
